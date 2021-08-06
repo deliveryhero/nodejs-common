@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-export {GoogleAuthOptions} from 'google-auth-library';
+export {GoogleAuthOptions} from '@deliveryhero/google-auth-library';
 /**
  * @type {module:common/operation}
  * @private

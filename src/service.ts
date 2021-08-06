@@ -18,7 +18,7 @@
 
 import arrify = require('arrify');
 import * as extend from 'extend';
-import {GoogleAuth, GoogleAuthOptions} from 'google-auth-library';
+import {GoogleAuth, GoogleAuthOptions} from '@deliveryhero/google-auth-library';
 import * as r from 'teeny-request';
 
 import {Interceptor} from './service-object';
@@ -66,7 +66,6 @@ export interface ServiceOptions extends GoogleAuthOptions {
   authClient?: GoogleAuth;
   interceptors_?: Interceptor[];
   email?: string;
-  token?: string;
   timeout?: number; // http.request.options.timeout
   userAgent?: string;
 }

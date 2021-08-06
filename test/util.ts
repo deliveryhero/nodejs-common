@@ -16,7 +16,7 @@ import {replaceProjectIdToken} from '@google-cloud/projectify';
 import * as assert from 'assert';
 import {describe, it, before, beforeEach, afterEach} from 'mocha';
 import * as extend from 'extend';
-import {GoogleAuth, GoogleAuthOptions} from 'google-auth-library';
+import {GoogleAuth, GoogleAuthOptions} from '@deliveryhero/google-auth-library';
 import * as nock from 'nock';
 import * as proxyquire from 'proxyquire';
 import * as r from 'teeny-request';
@@ -122,7 +122,7 @@ describe('common/util', () => {
 
   before(() => {
     util = proxyquire('../src/util', {
-      'google-auth-library': fakeGoogleAuth,
+      '@deliveryhero/google-auth-library': fakeGoogleAuth,
       'retry-request': fakeRetryRequest,
       'teeny-request': {teenyRequest: fakeRequest},
       '@google-cloud/projectify': {
@@ -715,7 +715,7 @@ describe('common/util', () => {
       util.makeAuthenticatedRequestFactory(config);
     });
 
-    it('should not pass projectId token to google-auth-library', done => {
+    it('should not pass projectId token to @deliveryhero/google-auth-library', done => {
       const config = {projectId: '{{projectId}}'};
 
       sandbox.stub(fakeGoogleAuth, 'GoogleAuth').callsFake(config_ => {

@@ -19,8 +19,8 @@
 import {replaceProjectIdToken} from '@google-cloud/projectify';
 import * as ent from 'ent';
 import * as extend from 'extend';
-import {GoogleAuth, GoogleAuthOptions} from 'google-auth-library';
-import {CredentialBody} from 'google-auth-library';
+import {GoogleAuth, GoogleAuthOptions} from '@deliveryhero/google-auth-library';
+import {CredentialBody} from '@deliveryhero/google-auth-library';
 import * as r from 'teeny-request';
 import * as retryRequest from 'retry-request';
 import {Duplex, DuplexOptions, Readable, Transform, Writable} from 'stream';
@@ -698,7 +698,7 @@ export class Util {
       };
 
       if (reqConfig.customEndpoint) {
-        // Using a custom API override. Do not use `google-auth-library` for
+        // Using a custom API override. Do not use `@deliveryhero/google-auth-library` for
         // authentication. (ex: connecting to a local Datastore server)
         onAuthenticated(null, reqOpts);
       } else {

@@ -1,13 +1,16 @@
 {
-  "name": "@google-cloud/common",
+  "name": "@deliveryhero/google-cloud-common",
   "description": "Common components for Cloud APIs Node.js Client Libraries",
-  "version": "3.7.0",
+  "version": "3.8.0",
   "license": "Apache-2.0",
   "author": "Google Inc.",
   "engines": {
     "node": ">=10"
   },
-  "repository": "googleapis/nodejs-common",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": "deliveryhero/nodejs-common",
   "main": "./build/src/index.js",
   "types": "./build/src/index.d.ts",
   "files": [
@@ -32,13 +35,13 @@
     "precompile": "gts clean"
   },
   "dependencies": {
+    "@deliveryhero/google-auth-library": "^7.6.0",
     "@google-cloud/projectify": "^2.0.0",
     "@google-cloud/promisify": "^2.0.0",
     "arrify": "^2.0.1",
     "duplexify": "^4.1.1",
     "ent": "^2.2.0",
     "extend": "^3.0.2",
-    "google-auth-library": "^7.0.2",
     "retry-request": "^4.2.2",
     "teeny-request": "^7.0.0"
   },
