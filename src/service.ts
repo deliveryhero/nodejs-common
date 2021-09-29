@@ -117,7 +117,7 @@ export class Service {
       credentials: options.credentials,
       keyFile: options.keyFilename,
       email: options.email,
-      token: options.token,
+      accessTokenProvider: options.accessTokenProvider,
     });
 
     this.makeAuthenticatedRequest =
