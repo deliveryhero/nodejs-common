@@ -74,7 +74,7 @@ describe('Service', () => {
     keyFile: {},
     email: 'email',
     projectId: 'project-id',
-    token: 'token',
+    accessTokenProvider: {},
   } as ServiceOptions;
 
   beforeEach(() => {
@@ -102,7 +102,7 @@ describe('Service', () => {
           email: OPTIONS.email,
           projectIdRequired: CONFIG.projectIdRequired,
           projectId: OPTIONS.projectId,
-          token: OPTIONS.token,
+          accessTokenProvider: OPTIONS.accessTokenProvider,
         });
 
         assert.deepStrictEqual(config, expectedConfig);
