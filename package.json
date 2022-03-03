@@ -1,7 +1,7 @@
 {
   "name": "@deliveryhero/google-cloud-common",
   "description": "Common components for Cloud APIs Node.js Client Libraries",
-  "version": "3.9.0",
+  "version": "3.10.0",
   "license": "Apache-2.0",
   "author": "Google Inc.",
   "engines": {
@@ -35,7 +35,7 @@
     "precompile": "gts clean"
   },
   "dependencies": {
-    "@deliveryhero/google-auth-library": "^7.7.0",
+    "@deliveryhero/google-auth-library": "^7.8.0",
     "@google-cloud/projectify": "^2.0.0",
     "@google-cloud/promisify": "^2.0.0",
     "arrify": "^2.0.1",
